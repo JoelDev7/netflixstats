@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS netflix;
+
 USE netflix;
 
 CREATE TABLE IF NOT EXISTS movies (
@@ -23,3 +25,5 @@ FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
+DELETE FROM movies WHERE director=null OR rating=null OR cast=null;

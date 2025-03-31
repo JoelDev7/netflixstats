@@ -1,13 +1,15 @@
 import { db } from "../database/connection.js";
 
 export async function getMovies(page = 1) {
-  const [rows] = await db.query("select * from movies limit 10");
+  const [rows] = await db.query(
+    "select * from movies order by rating limit 15"
+  );
   return rows;
 }
 
 export async function getBestRatedMovies() {
   const [rows] = await db.query(
-    "select * from movies order by rating desc limit 10"
+    "select * from movies order by rating desc limit 20"
   );
   return rows;
 }
@@ -32,13 +34,6 @@ export async function getMoviesWithMostRevenueByYear(year = 2024) {
   const [rows] = await db.query(
     "select title, budget, cast from movies where release_year=? order by revenue desc limit 10",
     [year]
-  );
-  return rows;
-}
-
-export async function getQ() {
-  const [rows] = await db.query(
-    "select * from movies where vote_count > 20000  order by  rating desc limit 20"
   );
   return rows;
 }
