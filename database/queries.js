@@ -42,5 +42,3 @@ export async function getQ() {
   );
   return rows;
 }
-
-//    "select title, country, rating, vote_count from movies where vote_count > 80 order by rating desc limit 20"
