@@ -1,3 +1,6 @@
 /node_modules
 .env
 /mysql-data
+/mysql_data
+/upload
+movies.csv
