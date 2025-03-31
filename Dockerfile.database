@@ -1,0 +1,7 @@
+FROM mysql:8.4
+
+WORKDIR /
+
+COPY ./initdb /docker-entrypoint-initdb.d
+
+COPY ./upload /var/lib/mysql-files/

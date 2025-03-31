@@ -1,6 +1,6 @@
 /node_modules
 /.github
 .gitignore
-/mysql-data
-/initdb
-/upload
+/mysql_data
+# /initdb
+# /upload
