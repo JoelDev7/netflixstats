@@ -8,9 +8,10 @@ API with information about Netflix streamed movies from 2010 to 2024.
 ## Project setup
 
 - Create a directory to run the app.
-- Download / copy - paste the "docker-compose.yml" on this repository to the directory you created.
-- Run "docker compose up".
-- Go to localhost:3000
+- Download / copy - paste the **docker-compose.yml** on this repository to the directory you created.
+- Remove the **build** step from both images to allow docker pull them from the web.
+- Run **docker compose up**.
+- Go to **localhost:3000**.
 
 # Available endopoints
 
